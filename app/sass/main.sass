@@ -1,0 +1,481 @@
+@import "../fonts/fonts.css"
+
+body
+	scroll-behavior: smooth
+	background-color: #fff
+	font-family: 'Proxima Nova Rg'
+	color: #000
+	font-size: 14px
+	line-height: 1.4
+	position: relative
+	-webkit-font-smoothing: antialiased
+*,
+*:after,
+*:before
+	transition: .3s all ease
+h1::selection, h2::selection, h3::selection, h4::selection, h5::selection, h6::selection, p::selection, a::selection, span::selection, div::selection, img::selection, mark::selection, ul::selection, li::selection
+	color            : #fff
+	background-color : #770a68
+::selection
+	color            : #fff
+	background-color : #770a68
+a, a:hover, a:active, a:focus,
+button, input, button:hover, button:active, button:focus,
+input:focus, input:active, .btn, .btn:after, select:focus, select:active
+	text-decoration: none
+	outline: none
+	transition: all 0.4s ease
+	cursor: pointer
+a
+	color: #000
+	&:hover
+		color: #770a68
+button
+	border: transparent
+	background: none
+option
+	color: #000
+textarea
+	resize:none
+input,
+textarea,
+select
+	color: #000
+	font-family: 'Proxima Nova Rg'
+	font-size: 14px
+	padding: 8px 30px
+	background: none
+input,
+select
+	border: none
+	border-bottom: 1px solid #000
+input[type="text"]::placeholder,
+input[type="email"]::placeholder,
+input[type="tel"]::placeholder
+	color: #fff
+input:focus,
+textarea:focus,
+input:active,
+textarea:active
+	background: none
+	color: #fff
+	border-bottom: 1px solid #770a68
+	border-color: #39B563
+	outline: none
+.shd
+	box-shadow: 0px 12px 28px -13px rgba(0,0,0,0.64)
+	&:hover
+		box-shadow: 0px 16px 32px -9px rgba(0,0,0,0.69)
+.btn
+	outline: none
+	font-size: 14px
+	font-family: 'Proxima Nova Bl'
+	text-transform: uppercase
+	text-align: center
+	padding: 15px 30px
+	color: #fff
+	border-radius: 6px
+	background: rgb(122,12,107)
+	background: linear-gradient(to bottom, rgb(122,12,107) 0%,rgb(153,33,136) 100%)
+	box-shadow: 0px 5px 19px -3px rgba(138,62,95,0.48)
+	position: relative
+	display: block
+	max-width: 320px
+	&:hover
+		box-shadow: 0px 13px 14px 1px rgba(138,62,95,0.72)
+		color: #fff
+		transform: scale(.97)
+	&_trsp
+		background-color: #fff
+		border: 1px solid rgb(122,12,107)
+		color: #000
+		&:hover
+			color: #000
+.und
+	text-decoration: underline
+	&:hover
+		text-decoration: none
+.upp
+	text-transform: uppercase
+.list_circle
+	list-style-type: none
+	padding-left: 0
+	li
+		padding-left: 25px
+		position: relative
+		&
+			margin-bottom: 10px
+		&::before
+			content: ''
+			position: absolute
+			width: 8px
+			height: 8px
+			background-color: rgb(122,12,107)
+			left: 0
+			top: 8px
+			border-radius: 50%
+.tabs
+	&__list
+		list-style-type: none
+		li
+			cursor: pointer
+	&__content-item
+			transition: unset
+.popup__container
+	padding: 40px
+	background-color: transparent
+	.fancybox-close-small
+		top: 40px
+		right: 40px
+		color: #000
+	.popup__wrp
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		-webkit-flex-wrap: wrap
+		-moz-flex-wrap: wrap
+		-ms-flex-wrap: wrap
+		-o-flex-wrap: wrap
+		flex-wrap: wrap
+		-ms-align-items: center
+		align-items: center
+		justify-content: center
+		position: relative
+		&::before
+			z-index: 1
+			content: ''
+			position: absolute
+			height: 110%
+			width: 110%
+			top: -5%
+			right: -5%
+			bottom: -5%
+			left: -5%
+			z-index: 1
+			background: rgb(122,12,107)
+			background: linear-gradient(to bottom, rgb(122,12,107) 0%,rgb(153,33,136) 100%)
+			opacity: .7
+	.popup_call__wrp
+		max-width: 320px
+		.popup
+			width: 100%
+			height: 100%
+			position: relative
+			z-index: 2
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			-webkit-flex-direction: column
+			-moz-flex-direction: column
+			-ms-flex-direction: column
+			-o-flex-direction: column
+			flex-direction: column
+			-ms-align-items: center
+			align-items: center
+			justify-content: flex-start
+			background-color: #fff
+			color: #fff
+			padding: 20px 25px 30px
+			text-align: center
+			&__ttl
+				font-family: 'Proxima Nova Bl', sans-serif
+				text-transform: uppercase
+				font-size: 22px
+				margin-bottom: 30px
+			.form__input
+				color: #fff
+				margin-bottom: 15px
+			input.form__input::placeholder
+				color: #fff
+			.btn
+				width: 100%
+				margin-bottom: 15px
+		&__policy
+			margin-top: 15px
+			max-width: 230px
+			text-align: center
+			font-size: 12px
+			a
+				font-size: 12px 
+				color: #00BFF3
+.owl-carousel
+	.owl-dots
+		position: absolute
+		width: 100%
+		display: flex
+		justify-content: center
+		bottom: 0
+		button.owl-dot
+			width: 15px
+			height: 15px
+			border: 1px solid #333
+			background-color: transparent
+			position: relative
+			transform: scale(1)
+			&:not(:last-child)
+				margin-right: 13px
+			&.active
+				transform: scale(0.9)
+				border-color: transparent
+				background-color: #770a68
+	.owl-nav
+		button.owl-prev,
+		button.owl-next
+			position: absolute
+			bottom: 50%
+			margin-bottom: -25.5px
+			border: 1px solid #000
+			padding: 10px !important
+		button.owl-prev:hover,
+		button.owl-next:hover
+			background-color: #fff
+			border-color: #fff
+		button.owl-prev.disabled,
+		button.owl-next.disabled,
+		button.owl-prev.disabled:hover,
+		button.owl-next.disabled:hover
+			opacity: .4
+			background-color: transparent
+			border-color: #000
+			cursor: default
+			
+		button.owl-prev
+			left: 0
+		button.owl-next
+			right: 0
+.section_inner
+	padding: 60px 0
+	position: relative
+	&::after
+		content: ''
+		position: absolute
+		width: 30px
+		height: 1px
+		background-color: #000
+		left: 50%
+		bottom: 0
+		margin-left: -15px
+.section__ttl
+	font-size: 40px
+	font-family: 'Proxima Nova Bl'
+	letter-spacing: 2px
+	margin-bottom: 45px
+	text-align: center
+	text-transform: uppercase
+.input__wrp
+	position: relative
+	max-width: 230px
+	input,
+	select
+		width: 100%
+		padding-left: 35px
+	&::before
+		content: ''
+		position: absolute
+		left: 10px
+		top: 8px
+		width: 18px
+		height: 17px
+		background-position: 50% 50%
+		background-size: contain
+		background-repeat: no-repeat
+	&_name::before
+		background-image: url(../img/icon__form-name.png)
+	&_mail::before
+		background-image: url(../img/icon__form-mes.png)
+		top: 8px
+	&_tel::before
+		background-image: url(../img/icon__form-tel.png)
+		top: 8px
+	&:not(:last-child)
+		margin-bottom: 15px
+.header
+	background-color: #3c1135
+	&__item
+		color: #fff
+		padding-left: 35px
+		position: relative
+		&::before
+			content: ''
+			position: absolute
+			left: 10px
+			top: 0px
+			width: 16px
+			height: 17px
+			background-position: 50% 50%
+			background-size: contain
+			background-repeat: no-repeat
+		&_mail
+			text-decoration: underline
+			margin-right: 40px
+			&::after
+				content: ''
+				position: absolute
+				right: -25px
+				top: 0px
+				width: 1px
+				height: 100%
+				background-color: #fff
+			&::before
+				background-image: url(../img/icon__mes_white.png)
+		&_tel
+			&::before
+				background-image: url(../img/icon__form-tel_white.png)
+		&:hover
+			color: #fff
+			opacity: .7
+	&__btn
+		position: relative
+		z-index: 1
+		margin-top: -10px
+		transform: translateY(6px)
+		&:hover
+			transform: translateY(3px)
+.banner
+	background-position: 50% 100%
+	background-size: cover
+	background-repeat: no-repeat
+	position: relative
+	&::before
+		content: ''
+		position: absolute
+		width: 100%
+		height: 100%
+		left: 0
+		top: 0
+		background-color: #fff
+		opacity: .7
+	.container
+		position: relative
+	&__top
+		padding: 20px 0
+	&__nav
+		position: relative
+		&::after
+			content: ''
+			position: absolute
+			left: 15px
+			right: 15px
+			bottom: -15px
+			width: calc(100% - 30px)
+			height: 2px
+			background-color: #ccc
+		&-link
+			font-family: 'Proxima Nova Bl'
+			text-align: center
+			text-transform: uppercase
+			display: block
+			position: relative
+			&::after
+				content: ''
+				position: absolute
+				left: 0
+				right: 0
+				bottom: -15px
+				width: 0
+				opacity: 0
+				height: 2px
+				background-color: #820f71
+				z-index: 1
+			&:hover
+				&::after
+					width: 100%
+					opacity: 1
+	&__logo
+		display: block
+		&:hover
+			opacity: .8
+			transform: scale(.92)
+.offer
+	padding: 40px 0
+	text-align: center
+	display: flex
+	flex-direction: column
+	align-items: center
+	&__ttl
+		font-size: 36px
+		text-transform: uppercase
+	&__subttl
+		font-size: 24px
+		color: #820f71
+	&__img
+		margin: 30px auto
+	&__btn
+		max-width: 700px
+.test
+	background: linear-gradient(to bottom, rgb(251,248,248) 0%,rgb(215,191,201) 100%)
+	&__item
+		display: flex
+		flex-direction: column
+		align-items: center
+		text-align: center
+		padding: 40px 10px
+		width: calc(90% / 5)
+		position: relative
+		&::before
+			content: ''
+			position: absolute
+			width: 100%
+			height: 0
+			left: 0
+			top: -10%
+			bottom: -10%
+			transition: .6s all ease
+			background: linear-gradient(to bottom, #d0b2c200 0%, #fbf8f8 33%, #fbf8f8 61%, #d0b2c200 100%)
+			background-repeat: no-repeat
+		&:hover
+			&::before
+				height: 120%
+			&
+				transform: scale(.95)
+		& > *
+			position: relative
+		&-img
+			height: 50px
+			width: 100%
+			max-width: 60px
+			margin: 0 auto 25px
+			background-repeat: no-repeat
+			background-position: 50% 50%
+			background-size: contain
+		&-ttl
+			font-family: 'Proxima Nova Bl'
+			font-size: 52px
+			position: relative
+			margin-bottom: 30px
+			&::after
+				content: 'α'
+				position: absolute
+				left: 46%
+				font-family: 'Poxima Nova Rg'
+				font-size: 18px
+				bottom: -20px
+		&-descr
+			font-size: 18px
+.team
+	background: linear-gradient(to bottom, #d7bfc9 0%, #bd92af 100%)
+	&__item
+		max-width: 270px
+		margin-left: auto
+		margin-right: auto
+		color: #fff
+		&-img
+			width: 100%
+			height: 360px
+			background-repeat: no-repeat
+			background-position: 50% 50%
+			background-size: cover
+			margin-bottom: 20px
+		&-ttl
+			font-family: 'Proxima Nova Bl'
+			font-size: 25px
+			text-transform: uppercase
+			max-width: 70%
+			margin-bottom: 10px
+		&-pos
+			font-size: 20px
+@import "media"
