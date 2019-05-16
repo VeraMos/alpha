@@ -22,6 +22,71 @@ $(function() {
         }
       }
 	});
+  $('.views-gallery__slider').owlCarousel({
+      nav: false,
+      dots: false,
+      loop: true,
+      center: true,
+      autoplay: true,
+      autoplayHoverPause: true,
+      navText: ["<img src='img/slider__arrow_prev.png'>", "<img src='img/slider__arrow_next.png'>"],
+      margin: 20,
+      responsive : {
+        0   : {
+            items: 1
+        },
+        380 : {
+            items: 2
+        },
+        480 : {
+            items: 3
+        },
+        768 : {
+            items: 4
+        },
+        1040 : {
+            items: 6
+        }
+      }
+  });
+  $('.part__slider').owlCarousel({
+      nav: true,
+      dots: false,
+      autoplay: true,
+      autoplayHoverPause: true,
+      navText: ["<img src='img/slider__arrow_prev.png'>", "<img src='img/slider__arrow_next.png'>"],
+      margin: 20,
+      responsive : {
+        0   : {
+            items: 1
+        },
+        380 : {
+            items: 2
+        },
+        480 : {
+            items: 3
+        },
+        768 : {
+            items: 5
+        },
+        1040 : {
+            items: 7
+        }
+      }
+  });
+  //offer-promo animation
+  // $(window).load(function(){
+  //   function offerPromo(){
+  //     $(".offer__promo").addClass('triggered');
+  //   };
+  //   window.setTimeout( offerPromo, 5000 ); // 5 seconds
+  // });
+
+  setTimeout(
+    function(){
+      $(".offer__promo").addClass('triggered');
+    }, 1500);
+  
   // tabs 
   // $(document).ready(function () {
   //   $(".tabs-content__item:not(:first-child)").hide();
