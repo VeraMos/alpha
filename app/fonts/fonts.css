@@ -71,7 +71,7 @@
 }
 
 @font-face {
-    font-family: 'Proxima Nova Sm Bl';
+    font-family: 'Proxima Nova Sm';
     src: url('ProximaNova-Semibold.woff2') format('woff2'),
         url('ProximaNova-Semibold.woff') format('woff');
     font-weight: 600;
