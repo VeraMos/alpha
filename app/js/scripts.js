@@ -113,6 +113,15 @@ $(function() {
         }
       }
   });
+  $('.sidebar__slider').owlCarousel({
+      nav: false,
+      dots: true,
+      items: 1,
+      autoplay: true,
+      autoplayHoverPause: true,
+      loop: true
+  });
+  
   
   // tabs 
   // $(document).ready(function () {

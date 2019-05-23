@@ -60,6 +60,9 @@ textarea:active
 	color: #000
 	box-shadow: inset 0px 0px 0px 3px rgba(130,15,113,1)
 	outline: none
+.img-fluid
+	max-width: 100%
+	height: auto
 .shd
 	box-shadow: 0px 12px 28px -13px rgba(0,0,0,0.64)
 	&:hover
@@ -94,6 +97,8 @@ textarea:active
 		text-decoration: none
 .upp
 	text-transform: uppercase
+.tac
+	text-align: center
 .list
 	&_circle
 		list-style-type: none
@@ -129,7 +134,24 @@ textarea:active
 				font-weight: 600
 				left: 0
 				top: 0px
-
+	&_string
+		list-style-type: none
+		padding-left: 0
+		margin-bottom: 0
+		li
+			padding-left: 20px
+			position: relative
+			&:not(:last-child)
+				margin-bottom: 10px
+			&::before
+				content: ''
+				position: absolute
+				width: 8px
+				height: 1px
+				background-color: #000
+				left: 0
+				top: 50%
+				margin-top: -.5px
 .tabs
 	&__list
 		list-style-type: none
@@ -233,12 +255,13 @@ textarea:active
 			height: 15px
 			border: 1px solid #333
 			background-color: transparent
+			border-radius: 50%
 			position: relative
 			transform: scale(1)
 			&:not(:last-child)
 				margin-right: 13px
 			&.active
-				transform: scale(0.9)
+				transform: scale(0.7)
 				border-color: transparent
 				background-color: #770a68
 	.owl-nav
@@ -289,6 +312,11 @@ textarea:active
 		letter-spacing: 2px
 		margin-bottom: 45px
 		text-align: center
+		text-transform: uppercase
+	&__subttl
+		font-size: 20px
+		margin-bottom: 15px
+		font-family: 'Proxima Nova Bl'
 		text-transform: uppercase
 	&__wrp
 		position: relative
@@ -388,6 +416,7 @@ textarea:active
 	padding-left: 0
 	margin-left: 0
 	margin-bottom: 0
+	margin-top: 20px
 	li,
 	a
 		position: relative
@@ -1461,3 +1490,165 @@ textarea:active
 				border-color: #76466f
 			&::before
 				opacity: .5
+.main
+	background-color: #f8f6f0
+	padding-bottom: 30px
+	.prog
+		&::before
+			background: linear-gradient(to bottom, #f8f6f0 0%, #0000 100%)
+	&__cnt
+		height: 100%
+		padding: 15px 20px
+		background-color: #fff
+		border-radius: 6px
+		box-shadow: 0px 2px 8px -3px rgba(0, 0, 0, 0.69)
+		.section__ttl
+			text-align: left
+			margin-bottom: 30px
+.sidebar
+	&__item
+		padding: 15px
+		background-color: #fff
+		border-radius: 6px
+		box-shadow: 0px 2px 8px -3px rgba(0, 0, 0, 0.69)
+		&:not(:last-child)
+			margin-bottom: 25px
+		&-ttl
+			font-family: 'Proxima Nova Bl'
+			font-size: 16px
+			text-transform: uppercase
+			color: #a3238e
+			margin-bottom: 10px
+		&-list
+			list-style-type: none
+			padding-left: 0
+			margin-bottom: 0
+			li
+				padding-left: 20px
+				position: relative
+				&:not(:last-child)
+					margin-bottom: 10px
+				&::before
+					content: ''
+					position: absolute
+					width: 8px
+					height: 1px
+					background-color: #000
+					left: 0
+					top: 50%
+					margin-top: -.5px
+				a
+					text-decoration: underline
+			&_trng
+				li
+					padding-left: 38px
+					&:not(:last-child)
+						margin-bottom: 20px
+					&::before
+						margin-top: -13.5px
+						width: 27px
+						height: 27px
+						background-position: 50% 50%
+						background-size: contain
+						background-repeat: no-repeat
+						background-color: transparent
+						border-radius: 50%
+						box-shadow: 0px 2px 8px -3px rgba(0, 0, 0, 0.69)
+					&:nth-child(1)
+						&::before
+							background-image: url('../img/sidebar__list-img_1.png')
+					&:nth-child(2)
+						&::before
+							background-image: url('../img/sidebar__list-img_2.png')
+					&:nth-child(3)
+						&::before
+							background-image: url('../img/sidebar__list-img_3.png')
+					&:nth-child(4)
+						&::before
+							background-image: url('../img/sidebar__list-img_4.png')
+	&__slider
+		padding-bottom: 40px
+		.cert__item
+			height: 250px
+		.owl-dots
+			bottom: 10px
+.serv
+	&-feed
+		padding: 39px 15px
+		background-color: #fff
+		border-radius: 6px
+		box-shadow: 0px 2px 8px -3px rgba(0, 0, 0, 0.69)
+		&__ttl
+			font-family: 'Proxima Nova Bl'
+			text-transform: uppercase
+			margin-bottom: 5px
+		&__item
+			&:not(:last-child)
+				margin-bottom: 15px
+			&-ttl
+				font-family: 'Proxima Nova Bl'
+				margin-bottom: 7px
+			input
+				width: 100%
+				border: 1px solid #bcbec0
+				border-radius: 2px
+		&__test
+			height: 100%
+			.section__ttl
+				font-size: 18px
+			&-item
+				width: 100%
+				height: 200px
+				display: flex
+				flex-direction: column
+				align-items: center
+				justify-content: center
+				position: relative
+				&::before,
+				&::after
+					content: ''
+					position: absolute
+					background-color: #bcbec0
+				&:nth-child(1),
+				&:nth-child(2)
+					margin-bottom: 30px
+			&-img
+				width: 100%
+				height: 63px
+				background-position: 50% 50%
+				background-repeat: no-repeat
+				background-size: contain
+				margin-bottom: 10px
+			&-ttl
+				text-align: center
+			&-in
+				& > div
+					&:nth-child(1)
+						.serv-feed__test-item
+							&::after
+								width: 1px
+								height: 100%
+								right: -15px
+								bottom: -15px
+					&:nth-child(1)
+						.serv-feed__test-item
+							&::before
+								width: 100%
+								height: 1px
+								right: -15px
+								bottom: 0
+					&:nth-child(2)
+						.serv-feed__test-item
+							&::after
+								width: 100%
+								height: 1px
+								left: -15px
+								bottom: 0
+					&:nth-child(3)
+						.serv-feed__test-item
+							&::after
+								width: 1px
+								height: 100%
+								right: -15px
+								top: -15px
+					
