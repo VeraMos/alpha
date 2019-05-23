@@ -74,18 +74,45 @@ $(function() {
         }
       }
   });
-  //offer-promo animation
-  // $(window).load(function(){
-  //   function offerPromo(){
-  //     $(".offer__promo").addClass('triggered');
-  //   };
-  //   window.setTimeout( offerPromo, 5000 ); // 5 seconds
-  // });
 
   setTimeout(
     function(){
       $(".offer__promo").addClass('triggered');
     }, 1500);
+
+  //reviews block
+  $('.rev__btn').on('click', function(e) {
+    e.preventDefault();
+    $(this).parent().parent().parent('.rev__item').toggleClass('active');
+    if ($('.rev__item').hasClass('active')) {
+      $(this).html('Скрыть отзыв');
+    } else {
+      $(this).html('Читать отзыв')
+    };
+  });
+
+  $('.cert__slider').owlCarousel({
+      nav: true,
+      dots: false,
+      autoplay: true,
+      autoplayHoverPause: true,
+      navText: ["<img src='img/slider__arrow_prev.png'>", "<img src='img/slider__arrow_next.png'>"],
+      margin: 20,
+      responsive : {
+        0   : {
+            items: 1
+        },
+        380 : {
+            items: 2
+        },
+        768 : {
+            items: 3
+        },
+        1040 : {
+            items: 4
+        }
+      }
+  });
   
   // tabs 
   // $(document).ready(function () {
