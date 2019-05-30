@@ -304,6 +304,9 @@ textarea:active
 			left: 50%
 			bottom: 0
 			margin-left: -15px
+		&.type
+			&::after
+				display: none
 		.container
 			position: relative
 	&__ttl
@@ -496,10 +499,15 @@ textarea:active
 @keyframes promo-img
 	0%
 		opacity: 0
-		transform: translateX(-20px)
+		transform: scale(0)
 	100%
 		opacity: 1
-		transform: translateX(0)
+		transform: scale(1)
+@keyframes promo-item
+	0%
+		transform: scaleX(0)
+	100%
+		transform: scaleX(1)
 .offer
 	padding: 40px 0
 	text-align: center
@@ -530,6 +538,7 @@ textarea:active
 			height: 100%
 			overflow: hidden
 			transition: width 3s ease-in-out
+			opacity: 0
 			&-img
 				display: block
 				position: absolute
@@ -545,21 +554,58 @@ textarea:active
 			width: 260px
 			height: 260px
 			margin: auto 40px
-			background-color: #fff
-			border-radius: 50%
-			display: flex
-			justify-content: center
-			align-items: center
-			box-shadow: 0px 16px 32px -9px rgba(0, 0, 0, 0.69)
+			span
+				width: 100%
+				height: 100%
+				background-color: #fff
+				border-radius: 50%
+				display: flex
+				justify-content: center
+				align-items: center
+				box-shadow: 0px 16px 32px -9px rgba(0, 0, 0, 0.69)
+				position: relative
+				z-index: 1
+			&::before,
+			&::after
+				content: ''
+				width: 434px
+				height: 247px
+				position: absolute
+				background-position: 50% 100%
+				background-size: 100%
+				background-repeat: no-repeat
 			&:nth-child(2)
 				margin-left: 81px
+				&::before,
+				&::after
+					top: -71px
+					left: -96px
+				&::before
+					background-image: url(../img/offer__promo-item_1.png)
+					animation: promo-item .9s 3s ease-in-out both
 				img
 					animation: promo-img .9s 3s ease-in-out both
 			&:nth-child(3)
+				&::before,
+				&::after
+					top: 117px
+					left: -99px
+					width: 439px
+					height: 252px
+				&::before
+					background-image: url(../img/offer__promo-item_2.png)
+					animation: promo-item .9s 3.27s ease-in-out both
 				img
 					animation: promo-img .9s 3.27s ease-in-out both
 			&:nth-child(4)
 				margin-right: 81px
+				&::before,
+				&::after
+					top: -71px
+					right: -96px
+				&::before
+					background-image: url(../img/offer__promo-item_3.png)
+					animation: promo-item .9s 3.45s ease-in-out both
 				img
 					animation: promo-img .9s 3.45s ease-in-out both
 
@@ -1652,3 +1698,160 @@ textarea:active
 								right: -15px
 								top: -15px
 					
+.rec
+	&__nav
+		margin-bottom: 40px
+		&-item
+			display: flex
+			justify-content: center
+			align-items: center
+			padding: 15px
+			border-radius: 6px
+			position: relative
+			min-height: 70px
+			// max-width: 260px
+			margin-left: auto
+			margin-right: auto
+			overflow: hidden
+			transition: .6s
+			background-position: 50% 50%
+			background-repeat: no-repeat
+			background-size: cover
+			&::before
+				content: ''
+				position: absolute
+				width: 100%
+				height: 100%
+				left: 0
+				top: 0
+				right: 0
+				bottom: 0
+				background-color: #820f71
+				opacity: .8
+				transition: .6s
+			span
+				font-family: 'Proxima Nova Bl'
+				font-size: 16px
+				color: #fff
+				text-transform: uppercase
+				position: relative
+				text-align: center
+			&:hover,
+			&.active
+				box-shadow: 0px 15px 24px 5px rgba(0, 0, 0, 0.34)
+				&::before
+					background-color: #fff
+				span
+					color: #000
+	&__list
+		&-item
+			margin-bottom: 30px
+			&-img
+				width: 100%
+				max-width: 210px
+				height: 180px
+				border-radius: 4px
+				box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25)
+				background-position: 50% 50%
+				background-repeat: no-repeat
+				background-size: cover
+			&-ttl
+				font-size: 18px
+				font-family: 'Proxima Nova Bl'
+				margin-bottom: 20px
+div
+	&.pagination
+		display: flex
+		justify-content: center
+		align-items: center
+		margin-top: 20px
+		padding: 15px 0
+		ul
+			&.pagination
+				list-style-type: none
+				display: flex
+				justify-content: center
+				align-items: center
+				margin-bottom: 0
+				padding: 0
+				li
+					display: flex
+					justify-content: center
+					align-items: center
+					border-radius: 4px
+					border: 1px solid #000
+					&:not(:last-child)
+						margin-right: 9px
+					&.active
+						border: none
+						background: linear-gradient(to bottom, #e6a6c8 0%, #f7cfa3 100%)
+						box-shadow: 0px 5px 7px 1px rgba(0, 0, 0, 0.34)
+						a
+							color: #000
+					a
+						color: #000
+						width: 25px
+						height: 25px
+						border: none
+						display: flex
+						justify-content: center
+						align-items: center
+					&:hover
+						opacity: .7
+					&.control
+						opacity: 1
+						color: #fff
+						position: relative
+						background-color: transparent
+						&:hover
+							background-color: transparent
+						a
+							width: 45px
+							height: 25px
+						span
+							width: 45px
+							height: 25px
+							opacity: 0
+						&::before
+							content: ''
+							position: absolute
+							left: 50%
+							margin-left: -15px
+							top: 50%
+							margin-top: -10px
+							width: 30px
+							height: 20px
+						&_prev
+							margin-right: 15px
+							&::before
+								background: url('../img/pag__prev.png') no-repeat 50% 50% / 17px
+						&_next
+							margin-left: 15px
+							&::before
+								background: url('../img/pag__next.png') no-repeat 50% 50% / 17px
+.team
+	&__list
+		&-item
+			height: 100%
+			max-width: 370px
+			margin-left: auto
+			margin-right: auto
+			padding: 25px
+			border-radius: 6px
+			display: flex
+			flex-direction: column
+			&-img
+				width: 100%
+				height: 210px
+				border-radius: 6px
+				background-position: 50% 50%
+				background-repeat: no-repeat
+				background-size: cover
+				margin-bottom: 15px
+			&-ttl
+				font-size: 18px
+				font-family: 'Proxima Nova Bl'
+				margin-bottom: 20px
+			b
+				font-size: 17px
+
