@@ -123,17 +123,18 @@ textarea:active
 		padding-left: 0
 		margin-bottom: 0
 		li
-			padding-left: 25px
+			padding-left: 35px
 			position: relative
 			&:not(:last-child)
 				margin-bottom: 10px
 			&::before
-				content: '\03b1'
+				content: ''
 				position: absolute
-				color: #000
-				font-weight: 600
+				width: 25px
+				height: 22px
+				background: url('../img/list_alpha.png') no-repeat 50% 50% / contain
 				left: 0
-				top: 0px
+				top: -3px
 	&_string
 		list-style-type: none
 		padding-left: 0
@@ -702,6 +703,7 @@ textarea:active
 		&-pos
 			font-size: 20px
 .prog
+	padding-top: 0
 	overflow: hidden
 	background: url('../img/progr__bg.jpg') no-repeat 50% 50% / cover
 	&::before
@@ -1224,14 +1226,14 @@ textarea:active
 			font-family: 'Proxima Nova Bl'
 			font-size: 52px
 			position: relative
-			margin-bottom: 30px
-			&::after
-				content: 'α'
-				position: absolute
-				left: 46%
-				font-family: 'Poxima Nova Rg'
-				font-size: 18px
-				bottom: -20px
+			margin-bottom: 10px
+			// &::after
+			// 	content: 'α'
+			// 	position: absolute
+			// 	left: 46%
+			// 	font-family: 'Poxima Nova Rg'
+			// 	font-size: 18px
+			// 	bottom: -20px
 			span
 				font-family: 'Proxima Nova Rg'
 				font-size: 36px
@@ -1642,6 +1644,12 @@ textarea:active
 			height: 100%
 			.section__ttl
 				font-size: 18px
+				margin-bottom: 20px
+			.section__subttl
+				font-size: 14px
+				font-weight: 600
+				text-align: center
+				margin-bottom: 30px
 			&-item
 				width: 100%
 				height: 200px

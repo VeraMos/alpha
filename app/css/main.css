@@ -222,7 +222,7 @@ textarea:active {
 }
 
 .list_alpha li {
-  padding-left: 25px;
+  padding-left: 35px;
   position: relative;
 }
 
@@ -231,12 +231,13 @@ textarea:active {
 }
 
 .list_alpha li::before {
-  content: '\03b1';
+  content: '';
   position: absolute;
-  color: #000;
-  font-weight: 600;
+  width: 25px;
+  height: 22px;
+  background: url("../img/list_alpha.png") no-repeat 50% 50%/contain;
   left: 0;
-  top: 0px;
+  top: -3px;
 }
 
 .list_string {
@@ -1200,6 +1201,7 @@ textarea:active {
 }
 
 .prog {
+  padding-top: 0;
   overflow: hidden;
   background: url("../img/progr__bg.jpg") no-repeat 50% 50%/cover;
 }
@@ -2074,16 +2076,7 @@ textarea:active {
   font-family: 'Proxima Nova Bl';
   font-size: 52px;
   position: relative;
-  margin-bottom: 30px;
-}
-
-.keys__item-ttl::after {
-  content: 'α';
-  position: absolute;
-  left: 46%;
-  font-family: 'Poxima Nova Rg';
-  font-size: 18px;
-  bottom: -20px;
+  margin-bottom: 10px;
 }
 
 .keys__item-ttl span {
@@ -2747,6 +2740,14 @@ textarea:active {
 
 .serv-feed__test .section__ttl {
   font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.serv-feed__test .section__subttl {
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 30px;
 }
 
 .serv-feed__test-item {
