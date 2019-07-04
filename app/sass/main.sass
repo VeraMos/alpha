@@ -86,10 +86,11 @@ textarea:active
 		box-shadow: 0px 13px 14px 1px rgba(138,62,95,0.72)
 		color: #fff
 	&_trsp
-		background-color: #fff
+		background: #fff
 		border: 1px solid rgb(122,12,107)
 		color: #000
 		&:hover
+			background: #e5e5e5
 			color: #000
 .und
 	text-decoration: underline
@@ -156,6 +157,8 @@ textarea:active
 .tabs
 	&__list
 		list-style-type: none
+		padding: 0
+
 		li
 			cursor: pointer
 	&__content-item
@@ -705,7 +708,7 @@ textarea:active
 			margin-bottom: 10px
 		&-pos
 			font-size: 20px
-.prog
+.train
 	padding-top: 0
 	overflow: hidden
 	background: url('../img/progr__bg.jpg') no-repeat 50% 50% / cover
@@ -716,7 +719,7 @@ textarea:active
 		height: 300px
 		top: 0
 		left: 0
-		background: linear-gradient(to bottom, #bd92af 0%, transparent 100%)
+		background: linear-gradient(to bottom, #f7f5ef 0%, transparent 100%)
 	&::after
 		display: none
 	.container
@@ -766,13 +769,13 @@ textarea:active
 				font-weight: 600
 		&-wrp
 			&:hover
-				.prog__item-in
+				.train__item
 					width: 200%
 					visibility: visible
 					opacity: 1
 					z-index: 2
 			&:nth-child(even)
-				.prog__item-in
+				.train__item-in
 					left: auto
 					right: 0
 .views
@@ -1544,9 +1547,22 @@ textarea:active
 .main
 	background-color: #f8f6f0
 	padding-bottom: 30px
-	.prog
+	position: relative
+	.train
 		&::before
 			background: linear-gradient(to bottom, #f8f6f0 0%, #0000 100%)
+	&_prog
+		background: url('../img/progr__bg.jpg') no-repeat 50% 50% / cover
+		&::before
+			content: ''
+			position: absolute
+			width: 100%
+			height: 100%
+			top: 0
+			left: 0
+			background: linear-gradient(to bottom, rgba(247,245,239,1) 0%, rgba(123,47,111,0.88) 38%, rgba(123,47,111,0.81) 62%, rgba(246,243,232,0.69) 100%)
+		.container
+			position: relative
 	&__cnt
 		height: 100%
 		padding: 15px 20px
@@ -1866,3 +1882,296 @@ div
 			b
 				font-size: 17px
 
+.blog
+	&__list
+		&-item
+			max-width: 270px
+			width: 100%
+			display: flex
+			flex-direction: column
+			overflow: hidden
+			border-radius: 6px
+			&-img
+				height: 236px
+				width: 100%
+				background-position: 50% 50%
+				background-repeat: no-repeat
+				background-size: cover
+				position: relative
+				&.video
+					&::before
+						content: ''
+						position: absolute
+						width: 70px
+						height: 70px
+						left: 50%
+						margin-left: -35px
+						top: 50%
+						margin-top: -35px
+						background: url('../img/icon__play-blog.png') no-repeat 50% 50% / contain
+					&:hover
+						&::before
+							transform: scale(1.1)
+			&-bot
+				padding: 13px 18px 21px
+			&-ttl
+				font-size: 18px
+				font-family: 'Proxima Nova Bl'
+				margin-bottom: 6px
+	&__filter
+		&-list
+			li
+				padding-left: 0
+		&-item
+			width: 100%
+			margin-bottom: 0
+			position: relative
+			input[type="checkbox"],
+			input[type="radio"]
+				position: absolute
+				z-index: 1
+				opacity: 0
+				width: 100%
+				height: 30px
+				cursor: pointer
+			span
+				font-size: 14px
+				position: relative
+				padding: 2px 0 0 30px
+				cursor: pointer
+				width: 100%
+				height: 30px
+				display: block
+				&::before
+					content: ''
+					position: absolute
+					top: 0px
+					left: -2px
+					width: 21px
+					height: 21px
+					border-radius: 4px
+					border: 1px solid #7a0c6b
+					background: #fff
+				&::after
+					content: ''
+					position: absolute
+					top: 4px
+					left: 2px
+					width: 13px
+					height: 13px
+					background-color: #7a0c6b
+					opacity: 0
+					transform: scale(0)
+					transition: 0.2s
+					border-radius: 2px
+			input[type="checkbox"]:checked + span::after,
+			input[type="radio"]:checked + span::after
+				opacity: 1
+				transform: scale(1)
+			input[type="checkbox"]:checked + span::before,
+			input[type="radio"]:checked + span::before
+				background-color: #fff
+		&-reset
+			padding-left: 30px
+			position: relative
+			&::before
+				content: ''
+				position: absolute
+				width: 18px
+				height: 24px
+				left: 0
+				top: -2px
+				background: url('../img/icon__delete.png') no-repeat 50% 50% / contain
+			span
+				text-decoration: underline
+			&:hover
+				opacity: .7
+				transform: translateX(3px)
+.prog
+	padding-top: 0
+	overflow: hidden
+	&::after
+		display: none
+	&__banner
+		width: 100%
+		background-position: 50% 50%
+		background-repeat: no-repeat
+		background-size: cover
+		border-radius: 6px
+		text-align: center
+		padding: 30px 15px
+		margin-bottom: 25px
+		span
+			font-family: 'Proxima Nova Bl'
+			font-size: 25px
+			text-transform: uppercase
+	.tabs__list
+		margin-bottom: 0
+		li
+			color: #fff
+			text-align: center
+			padding-left: 6px
+			padding-right: 6px
+			position: relative
+			margin-bottom: 30px
+			&:not(:last-child)
+				&::before
+					content: ''
+					position: absolute
+					width: 1px
+					height: 100%
+					right: 0
+					top: 0
+					background: linear-gradient(to bottom, transparent 0%, #fff 50%, transparent 100%)
+			&::after
+				content: ''
+				position: absolute
+				width: 30px
+				height: 30px
+				left: 50%
+				margin-left: -15px
+				bottom: -46px
+				border-bottom: solid 15px #fff
+				border-right: solid 15px #fff
+				border-left: solid 15px transparent
+				border-top: solid 15px transparent
+				transform: rotate(225.3deg) scale(0)
+				opacity: 0
+				transition: .1s all ease
+			&.active
+				color: #000
+				&::after
+					opacity: 1
+					transform: rotate(225.3deg) scale(1)
+	&__item
+		height: 100%
+		padding: 25px
+		background-color: #fff
+		border-radius: 6px
+		position: relative
+		&_info
+			transition: unset
+		&_construct
+			background-color: #ffd0f8
+			&.inactive
+				&::before
+					content: ''
+					position: absolute
+					width: 100%
+					height: 100%
+					left: 0
+					top: 0
+					background-color: #fff
+					opacity: .7
+					border-radius: 6px
+					z-index: 2
+		&-img
+			color: #fff
+			width: 100%
+			max-width: 330px
+			margin-bottom: 15px
+			border-radius: 3px
+			min-height: 250px
+			padding: 30px
+			overflow: hidden
+			background-position: 50% 50%
+			background-repeat: no-repeat
+			background-size: cover
+			display: flex
+			justify-content: center
+			align-items: center
+			text-align: center
+			position: relative
+			&::before
+				content: ''
+				position: absolute
+				width: 100%
+				height: 100%
+				left: 0
+				top: 0
+				background-color: #383838
+				opacity: .4
+			span
+				position: relative
+				font-family: 'Proxima Nova Bl'
+				font-size: 25px
+				text-transform: uppercase
+		&-ttl
+			font-family: 'Proxima Nova Ex Bl'
+			font-size: 18px
+			margin-bottom: 5px
+		&-choose,
+		&-more
+			width: 230px
+		&-btn
+			width: 100%
+			padding-left: 3px
+			padding-right: 5px
+			position: relative
+			input[type="checkbox"],
+			input[type="radio"]
+				position: absolute
+				z-index: 1
+				opacity: 0
+				width: 100%
+				height: 30px
+				cursor: pointer
+			span
+				font-size: 14px
+				position: relative
+				text-align: center
+				cursor: pointer
+				width: 100%
+				height: 30px
+				display: flex
+				justify-content: center
+				align-items: center
+				color: #000
+				.prog__item-btn-text
+					font-size: 12px
+					position: relative
+					z-index: 1
+					transition: unset
+				&::before
+					content: ''
+					position: absolute
+					top: 0px
+					left: 0
+					width: 100%
+					height: 100%
+					border-radius: 2px
+					border: 1px solid #7a0c6b
+					background: #fff
+				&::after
+					content: ''
+					position: absolute
+					top: 0
+					left: 0
+					width: 100%
+					height: 100%
+					background-color: #7a0c6b
+					opacity: 0
+					transform: scale(0)
+					transition: 0.2s
+					border-radius: 2px
+			input[type="checkbox"]:checked + span,
+			input[type="radio"]:checked + span
+				color: #fff
+			input[type="checkbox"]:checked + span::after,
+			input[type="radio"]:checked + span::after
+				opacity: 1
+				transform: scale(1)
+			input[type="checkbox"]:checked + span::before,
+			input[type="radio"]:checked + span::before
+				background-color: #fff
+				box-shadow: 0px 5px 19px -3px rgba(138, 62, 95, 0.48)
+		&-modal
+			max-width: 270px
+			width: 100%
+			// display: block
+			// margin-left: auto
+			// margin-right: auto
+			// position: absolute
+			// left: 50%
+			// margin-left: calc(-270px/2)
+			// bottom: 25px
