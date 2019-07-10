@@ -1313,7 +1313,7 @@ textarea:active {
   font-weight: 600;
 }
 
-.train__item-wrp:hover .train__item {
+.train__item-wrp:hover .train__item-in {
   width: 200%;
   visibility: visible;
   opacity: 1;
