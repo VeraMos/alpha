@@ -1160,6 +1160,67 @@ textarea:active {
   font-size: 18px;
 }
 
+.test-list__item {
+  padding: 15px 20px;
+  background-color: #fff;
+  -webkit-border-radius: 6px;
+          border-radius: 6px;
+}
+
+.test-list__item-top {
+  font-family: 'Proxima Nova Bl';
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.test-list__item-ttl {
+  font-family: 'Proxima Nova Bl';
+  font-size: 18px;
+  margin-bottom: 25px;
+}
+
+.test-list__item-img {
+  width: 100%;
+  max-width: 670px;
+  height: 150px;
+  -webkit-border-radius: 6px;
+          border-radius: 6px;
+  border: 1px solid #e1dbdb;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  -webkit-background-size: cover;
+          background-size: cover;
+  margin-bottom: 25px;
+}
+
+.test-list .tabs__list li {
+  padding: 8px 15px;
+  border: 1px solid #e1dbdb;
+  -webkit-border-radius: 6px;
+          border-radius: 6px;
+  margin-right: 8px;
+  text-transform: uppercase;
+}
+
+.test-list .tabs__list li.active {
+  color: #fff;
+  background: #7a0c6b;
+  background: -webkit-gradient(linear, left top, left bottom, from(#7a0c6b), to(#992188));
+  background: -webkit-linear-gradient(top, #7a0c6b 0%, #992188 100%);
+  background: -o-linear-gradient(top, #7a0c6b 0%, #992188 100%);
+  background: linear-gradient(to bottom, #7a0c6b 0%, #992188 100%);
+  -webkit-box-shadow: 0px 5px 19px -3px rgba(138, 62, 95, 0.48);
+          box-shadow: 0px 5px 19px -3px rgba(138, 62, 95, 0.48);
+  position: relative;
+  display: inline-block;
+  max-width: 320px;
+}
+
+.test-list .tabs__list li:hover {
+  -webkit-box-shadow: 0px 13px 14px 1px rgba(138, 62, 95, 0.72);
+          box-shadow: 0px 13px 14px 1px rgba(138, 62, 95, 0.72);
+}
+
 .team {
   overflow: hidden;
   background: -webkit-gradient(linear, left top, left bottom, from(#d7bfc9), to(#bd92af));
