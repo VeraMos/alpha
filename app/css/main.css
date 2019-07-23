@@ -933,7 +933,6 @@ textarea:active {
   -webkit-transition: width 3s ease-in-out;
   -o-transition: width 3s ease-in-out;
   transition: width 3s ease-in-out;
-  opacity: 0;
 }
 
 .offer__promo-bar-img {
@@ -954,23 +953,6 @@ textarea:active {
   width: 260px;
   height: 260px;
   margin: auto 40px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.offer__promo-item span {
-  width: 99%;
-  height: 92%;
   background-color: #fff;
   -webkit-border-radius: 50%;
           border-radius: 50%;
@@ -988,77 +970,14 @@ textarea:active {
           align-items: center;
   -webkit-box-shadow: 0px 16px 32px -9px rgba(0, 0, 0, 0.69);
           box-shadow: 0px 16px 32px -9px rgba(0, 0, 0, 0.69);
-  position: relative;
-  z-index: 1;
-}
-
-.offer__promo-item::before, .offer__promo-item::after {
-  content: '';
-  width: 434px;
-  height: 247px;
-  position: absolute;
-  background-position: 50% 100%;
-  -webkit-background-size: 100% 100%;
-          background-size: 100%;
-  background-repeat: no-repeat;
 }
 
 .offer__promo-item:nth-child(2) {
   margin-left: 81px;
 }
 
-.offer__promo-item:nth-child(2)::before, .offer__promo-item:nth-child(2)::after {
-  top: -71px;
-  left: -96px;
-}
-
-.offer__promo-item:nth-child(2)::before {
-  background-image: url(../img/offer__promo-item_1.png);
-  -webkit-animation: promo-item .9s 3s ease-in-out both;
-          animation: promo-item .9s 3s ease-in-out both;
-}
-
-.offer__promo-item:nth-child(2) img {
-  -webkit-animation: promo-img .9s 3s ease-in-out both;
-          animation: promo-img .9s 3s ease-in-out both;
-}
-
-.offer__promo-item:nth-child(3)::before, .offer__promo-item:nth-child(3)::after {
-  top: 117px;
-  left: -99px;
-  width: 439px;
-  height: 252px;
-}
-
-.offer__promo-item:nth-child(3)::before {
-  background-image: url(../img/offer__promo-item_2.png);
-  -webkit-animation: promo-item .9s 3.27s ease-in-out both;
-          animation: promo-item .9s 3.27s ease-in-out both;
-}
-
-.offer__promo-item:nth-child(3) img {
-  -webkit-animation: promo-img .9s 3.27s ease-in-out both;
-          animation: promo-img .9s 3.27s ease-in-out both;
-}
-
 .offer__promo-item:nth-child(4) {
   margin-right: 81px;
-}
-
-.offer__promo-item:nth-child(4)::before, .offer__promo-item:nth-child(4)::after {
-  top: -71px;
-  right: -96px;
-}
-
-.offer__promo-item:nth-child(4)::before {
-  background-image: url(../img/offer__promo-item_3.png);
-  -webkit-animation: promo-item .9s 3.45s ease-in-out both;
-          animation: promo-item .9s 3.45s ease-in-out both;
-}
-
-.offer__promo-item:nth-child(4) img {
-  -webkit-animation: promo-img .9s 3.45s ease-in-out both;
-          animation: promo-img .9s 3.45s ease-in-out both;
 }
 
 .offer__promo.triggered .offer__promo-bar {

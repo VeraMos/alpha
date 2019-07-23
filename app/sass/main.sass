@@ -500,6 +500,81 @@ textarea:active
 		&:hover
 			opacity: .8
 			transform: scale(.92)
+@keyframes promo-bar
+	0%
+		opacity: 0
+		transform: scale(0)
+	100%
+		opacity: 1
+		transform: scale(1)
+@keyframes promo-item
+	0%
+		transform: scaleX(0)
+	100%
+		transform: scaleX(1)
+.offer
+	padding: 40px 0
+	text-align: center
+	display: flex
+	flex-direction: column
+	align-items: center
+	&__ttl
+		font-size: 36px
+		text-transform: uppercase
+	&__subttl
+		font-size: 24px
+		color: #820f71
+	&__promo
+		width: 100%
+		max-width: 1047px
+		height: 466px
+		margin: 30px auto
+		background: url('../img/offer-promo__bg.png') no-repeat 50% 50% / contain
+		position: relative
+		display: flex
+		justify-content: space-around
+		align-items: center
+		&-bar
+			position: absolute
+			left: 0
+			top: 0
+			width: 0%
+			height: 100%
+			overflow: hidden
+			transition: width 3s ease-in-out
+			
+			&-img
+				display: block
+				position: absolute
+				left: -16px
+				top: 0
+				width: 1079px
+				height: 466px
+				background-position: 50% 100%
+				background-size: 100%
+				background-repeat: no-repeat
+		&-item
+			position: relative
+			width: 260px
+			height: 260px
+			margin: auto 40px
+			background-color: #fff
+			border-radius: 50%
+			display: flex
+			justify-content: center
+			align-items: center
+			box-shadow: 0px 16px 32px -9px rgba(0, 0, 0, 0.69)
+			&:nth-child(2)
+				margin-left: 81px
+			&:nth-child(4)
+				margin-right: 81px
+		&.triggered
+			.offer__promo-bar
+				width: 100%
+	&__btn
+		max-width: 700px
+/* новая анимация*/
+/*
 @keyframes promo-img
 	0%
 		opacity: 0
@@ -621,6 +696,7 @@ textarea:active
 				width: 100%
 	&__btn
 		max-width: 700px
+*/
 .test
 	background: linear-gradient(to bottom, #f7f6f1 0%,#d7bfc9 100%)
 	&__item
