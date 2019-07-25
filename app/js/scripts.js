@@ -139,7 +139,7 @@ $(function() {
   $('.prog__item-info').hide();
   $('.prog__item-more').on('click', function(e){
     e.preventDefault();
-    $(this).parents('.prog__in').children('.prog__item-info').slideToggle();
+    $(this).toggleClass('active').parents('.prog__in').children('.prog__item-info').slideToggle();
   })
   $('.prog__item-info-close').on('click', function(e){
     e.preventDefault();

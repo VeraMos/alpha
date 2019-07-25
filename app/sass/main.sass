@@ -9,6 +9,7 @@ body
 	line-height: 1.4
 	position: relative
 	-webkit-font-smoothing: antialiased
+	transition: unset
 *,
 *:after,
 *:before
@@ -166,6 +167,7 @@ textarea:active
 .popup__container
 	padding: 40px
 	background-color: transparent
+	overflow: hidden
 	.fancybox-close-small
 		top: 40px
 		right: 40px
@@ -199,54 +201,82 @@ textarea:active
 			background: rgb(122,12,107)
 			background: linear-gradient(to bottom, rgb(122,12,107) 0%,rgb(153,33,136) 100%)
 			opacity: .7
-	.popup_call__wrp
-		max-width: 320px
-		.popup
-			width: 100%
-			height: 100%
-			position: relative
-			z-index: 2
-			display: -webkit-flex
-			display: -moz-flex
-			display: -ms-flex
-			display: -o-flex
-			display: flex
-			-webkit-flex-direction: column
-			-moz-flex-direction: column
-			-ms-flex-direction: column
-			-o-flex-direction: column
-			flex-direction: column
-			-ms-align-items: center
-			align-items: center
-			justify-content: flex-start
-			background-color: #fff
-			color: #000
-			padding: 20px 25px 30px
-			text-align: center
-			&__ttl
-				color: inset 0px 0px 0px 4px rgba(130,15,113,1)
-				font-family: 'Proxima Nova Bl', sans-serif
+	.popup
+		width: 100%
+		height: 100%
+		position: relative
+		z-index: 2
+		display: flex
+		flex-direction: column
+		align-items: center
+		justify-content: flex-start
+		background-color: #fff
+		color: #000
+		padding: 20px 25px 30px
+		text-align: center
+		&_call
+			&__wrp
+				max-width: 320px
+		&_cart
+			&__wrp
+				max-width: 970px
+				.popup
+					text-align: left
+			&__head
+				font-family: 'Proxima Nova Bl'
+				font-size: 18px
 				text-transform: uppercase
-				font-size: 22px
-				margin-bottom: 30px
-			.form__input
-				color: #000
-				margin-bottom: 15px
-				border: 1px solid rgba(130,15,113,1)
-				width: 100%
-			input.form__input::placeholder
-				color: #000
-			.btn
-				width: 100%
-				margin-bottom: 15px
-			&__policy
-				margin-top: 15px
-				max-width: 230px
-				text-align: center
-				font-size: 12px
-				a
-					font-size: 12px 
-					color: rgba(130,15,113,1)
+				div
+					&:nth-child(1)
+						width: 60%
+						padding: 15px 0 5px
+			&__item
+				display: flex
+				align-items: center
+				div
+					border-bottom: 2px solid #fff
+					font-family: 'Proxima Nova Sm'
+					&:nth-child(1)
+						width: 70%
+						height: 80px
+						padding: 25px 15px
+						border-right: 2px solid #fff
+					&:nth-child(2)
+						width: 30%
+						height: 80px
+						padding: 25px 15px
+				&:nth-child(odd)
+					background-color: #f1e6ef
+				&:nth-child(even)
+					background-color: #e3cde0
+			&__btn
+				margin-left: 8px
+				&:hover
+					opacity: .4
+		&__ttl
+			color: inset 0px 0px 0px 4px rgba(130,15,113,1)
+			font-family: 'Proxima Nova Bl', sans-serif
+			text-transform: uppercase
+			font-size: 22px
+			margin-bottom: 30px
+		.form__input
+			color: #000
+			margin-bottom: 15px
+			border: 1px solid rgba(130,15,113,1)
+			width: 100%
+		input.form__input::placeholder
+			color: #000
+		.btn
+			width: 100%
+			margin-bottom: 15px
+		&__policy
+			margin-top: 15px
+			max-width: 230px
+			text-align: center
+			font-size: 12px
+			a
+				font-size: 12px 
+				color: rgba(130,15,113,1)
 .owl-carousel
 	.owl-dots
 		position: absolute
@@ -573,130 +603,6 @@ textarea:active
 				width: 100%
 	&__btn
 		max-width: 700px
-/* новая анимация*/
-/*
-@keyframes promo-img
-	0%
-		opacity: 0
-		transform: scale(0)
-	100%
-		opacity: 1
-		transform: scale(1)
-@keyframes promo-item
-	0%
-		transform: scaleX(0)
-	100%
-		transform: scaleX(1)
-.offer
-	padding: 40px 0
-	text-align: center
-	display: flex
-	flex-direction: column
-	align-items: center
-	&__ttl
-		font-size: 36px
-		text-transform: uppercase
-	&__subttl
-		font-size: 24px
-		color: #820f71
-	&__promo
-		width: 100%
-		max-width: 1047px
-		height: 466px
-		margin: 30px auto
-		background: url('../img/offer-promo__bg.png') no-repeat 50% 50% / contain
-		position: relative
-		display: flex
-		justify-content: space-around
-		align-items: center
-		&-bar
-			position: absolute
-			left: 0
-			top: 0
-			width: 0%
-			height: 100%
-			overflow: hidden
-			transition: width 3s ease-in-out
-			opacity: 0
-			&-img
-				display: block
-				position: absolute
-				left: -16px
-				top: 0
-				width: 1079px
-				height: 466px
-				background-position: 50% 100%
-				background-size: 100%
-				background-repeat: no-repeat
-		&-item
-			position: relative
-			width: 260px
-			height: 260px
-			margin: auto 40px
-			display: flex
-			justify-content: center
-			align-items: center
-			span
-				width: 99%
-				height: 92%
-				background-color: #fff
-				border-radius: 50%
-				display: flex
-				justify-content: center
-				align-items: center
-				box-shadow: 0px 16px 32px -9px rgba(0, 0, 0, 0.69)
-				position: relative
-				z-index: 1
-			&::before,
-			&::after
-				content: ''
-				width: 434px
-				height: 247px
-				position: absolute
-				background-position: 50% 100%
-				background-size: 100%
-				background-repeat: no-repeat
-			&:nth-child(2)
-				margin-left: 81px
-				&::before,
-				&::after
-					top: -71px
-					left: -96px
-				&::before
-					background-image: url(../img/offer__promo-item_1.png)
-					animation: promo-item .9s 3s ease-in-out both
-				img
-					animation: promo-img .9s 3s ease-in-out both
-			&:nth-child(3)
-				&::before,
-				&::after
-					top: 117px
-					left: -99px
-					width: 439px
-					height: 252px
-				&::before
-					background-image: url(../img/offer__promo-item_2.png)
-					animation: promo-item .9s 3.27s ease-in-out both
-				img
-					animation: promo-img .9s 3.27s ease-in-out both
-			&:nth-child(4)
-				margin-right: 81px
-				&::before,
-				&::after
-					top: -71px
-					right: -96px
-				&::before
-					background-image: url(../img/offer__promo-item_3.png)
-					animation: promo-item .9s 3.45s ease-in-out both
-				img
-					animation: promo-img .9s 3.45s ease-in-out both
-
-		&.triggered
-			.offer__promo-bar
-				width: 100%
-	&__btn
-		max-width: 700px
-*/
 .test
 	background: linear-gradient(to bottom, #f7f6f1 0%,#d7bfc9 100%)
 	&__item
@@ -2219,7 +2125,13 @@ div
 			margin-bottom: 5px
 		&-choose,
 		&-more
-			width: 230px
+			width: 260px
+			&.active
+				.prog__item-more-arr
+					transform: rotate(90deg) scaleX(-1)
+			&-arr
+				margin-left: 13px
+				transform: rotate(90deg)
 		&-btn
 			width: 100%
 			padding-left: 3px
