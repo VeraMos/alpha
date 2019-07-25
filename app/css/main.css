@@ -3523,6 +3523,8 @@ div.pagination ul.pagination li.control_next::before {
 }
 
 .prog__item-choose-arr, .prog__item-more-arr {
+  width: 10px;
+  height: auto;
   margin-left: 13px;
   -webkit-transform: rotate(90deg);
       -ms-transform: rotate(90deg);
