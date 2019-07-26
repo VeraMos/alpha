@@ -27,3 +27,50 @@
     display: none;
   }
 }
+
+@media screen and (max-width: 768px) {
+  .header__item_mail {
+    display: block;
+    margin-bottom: 5px;
+  }
+  .banner__nav {
+    display: none;
+  }
+  .banner__nav--active {
+    display: block;
+}
+  .banner__nav-wrapper--active {
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    opacity: 0.9;
+    padding-top: 70px;
+    background-color: #992188;
+    position: absolute;
+    top: 0px;
+    left: -90px;
+    z-index: 5;
+}
+  .banner__nav-link {
+    font-size: 30px;
+    color: #fff;
+  }
+
+  .banner__nav-link:hover {
+    color: #fff;
+  }
+
+  .banner__nav-link::after {
+    bottom: 0;
+    background-color: #fff;
+  }
+
+  .banner__nav::after {
+    background-color: transparent;
+  }
+
+  .menu-btn {
+    display: block;
+}
+
+}

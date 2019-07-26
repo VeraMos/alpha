@@ -157,4 +157,13 @@ $(function() {
   //     $('body').toggleClass("fixed");
   //   });
   // }
+
+    $('.menu-btn').on('click', function(e) {
+  e.preventDefault();
+  $(this).toggleClass('menu-btn_active');
+  $('.banner__nav-wrapper').toggleClass('banner__nav-wrapper--active');
+  $('.header__menu-item').toggleClass('header__menu-item--active');
+  $('.banner__nav').toggleClass('banner__nav--active');
+});
+
 });
