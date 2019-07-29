@@ -102,6 +102,14 @@
   .sidebar__item {
     margin-bottom: 30px;
   }
+
+  .test-list .tabs__list li {
+    margin: 5px;
+  }
+
+  .train__item-card__ttl {
+    font-size: 18px;
+  }
 }
 
 @media screen and (max-width: 576px) {
@@ -142,6 +150,13 @@
   }
 }
 
+@media screen and (max-width: 400px) {
+    .part__slider-item {
+    margin: 0 auto;
+  }
+}
+
+
 @media screen and (max-width: 340px) {
   .header__item_mail {
     margin-right: 5px;
@@ -152,4 +167,5 @@
   .btn__serv-feed {
     padding: 15px 18px;
   }
+
 }

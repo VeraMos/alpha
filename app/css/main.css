@@ -1059,7 +1059,7 @@ textarea:active {
   text-align: center;
   padding: 40px 10px;
   width: -webkit-calc(90% / 5);
-  width: calc(90% / 5);
+  min-width: 180px;
   position: relative;
 }
 
